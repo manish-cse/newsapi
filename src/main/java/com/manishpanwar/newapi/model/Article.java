@@ -1,6 +1,7 @@
 package com.manishpanwar.newapi.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Article {
     private String id;
@@ -9,12 +10,13 @@ public class Article {
     private String url;
     private LocalDateTime publicationDate;
     private String sourceName;
-    private String category;
+    private List<String> category;
     private double relevanceScore;
     private double latitude;
     private double longitude;
 
-    public Article() {}
+    public Article() {
+    }
 
     public String getId() {
         return id;
@@ -64,11 +66,11 @@ public class Article {
         this.sourceName = sourceName;
     }
 
-    public String getCategory() {
+    public List<String> getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(List<String> category) {
         this.category = category;
     }
 
